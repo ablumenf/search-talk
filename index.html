@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+    	<title>Sunny</title>
+
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/sunny.css" rel="stylesheet">
+		<script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
+	</head>
+
+  <body>
+
+		<div class="container mt-3">
+
+				<h4>Look Up Episode by Title</h4>
+
+				<div class="mt-4">
+
+					<input type="text" id="textInput" class="form-control displayOverride"/>
+
+					<button class="btn btn-success searchButton ml-5" onclick="renderEpisode(document.getElementById('textInput').value)">Search</button>
+
+				</div>
+
+				<div id="searchText" class="mt-2"></div>
+				<div id="searchAlert" class="mt-2"></div>
+				<hr>
+				<table class="table table-borderless table-dark table-hover" style="width: 450px; margin-top: 5px;">
+					<thead id="tableheader"></thead>
+					<tbody id="values"></tbody>
+				</table>
+
+			<script src="sunny_app.js"></script>
+			<script src="episodes.js"></script>
+			<script src="util.js"></script>
+			<script src="searchEngine1.js"></script>
+
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

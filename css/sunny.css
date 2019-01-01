@@ -1,0 +1,15 @@
+.blueText {
+	color: #007bff;
+	font-weight: bold;
+}
+
+.displayOverride {
+	display: inline;
+}
+
+.searchButton {
+	width: 100px;
+	height: 36px;
+	position: relative;
+	top: -3px;
+}

@@ -7,4 +7,4 @@ Author: Aaron Blumenfeld
 ## ABOUT:
 
 Simple JavaScript search engine to search for an episode of It's Always Sunny in Philadelphia. This is based on Jaccard similarity
-+ NLP pre-processing. Several iterations are given (see searchEngineX.js for X ranging from 1 to 3).
+and NLP pre-processing. Several iterations are given (see searchEngineX.js for X ranging from 1 to 3).

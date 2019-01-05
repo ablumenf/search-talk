@@ -1,6 +1,6 @@
 /* Iteration 1: simple Jaccard similarity */
 
-const showSimilarities = false;
+const showSimilarities = true;
 
 // argmax(jaccard(input, e)) for e ranging over all episodes
 function findEpisode(input) {

@@ -1,7 +1,18 @@
 /* Iteration 3: Pre-compute NLP at page load */
 
 // pre-compute NLP stuff to hide NLP's really bad latency
-const nlp_episodes = episodes.map(season => season.map(ep => nlp_reduce(ep)));
+const nlp_episodes = episodes.map(season => season.map(ep => nlp_reduce(ep))); // this is functionally equivalent to the commented-out code below:
+
+/*
+let nlp_episodes = [];
+for(let i = 0; i < episodes.length; i++) {
+    let currSeason = [];
+    for(let j = 0; j < episodes[i].length; j++) {
+        currSeason.push(nlp_reduce(episodes[i][j]));
+    }
+    nlp_episodes.push(currSeason);
+}
+*/
 
 // argmax(jaccard(input, e)) for e ranging over all episodes
 function findEpisode(input) {

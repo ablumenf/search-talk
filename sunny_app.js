@@ -33,7 +33,7 @@ function removeErrorMessage(msDelay) {
 
 function renderSimilarityList(queryString) {
 	const episodeList = episodes.reduce((accumulator, season) => accumulator.concat(season), [])
-		.map(ep => [ep, jaccard(queryString, ep).toFixed(2)])
+		.map(ep => [ep.title, jaccard(queryString, ep.title).toFixed(2)])
 		.sort((ep1, ep2) => ep2[1] - ep1[1])
 		.slice(0, 10) // top 10
 		.filter(ep => ep[1] > 0); // possibly less than 10, filter out episodes with similarity 0

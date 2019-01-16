@@ -13,7 +13,7 @@ function intersection(setA, setB) {
 
 function stringToSet(str) {
     const lowerCaseArr = str.toLowerCase().split(" ");
-    const stopWords = new Set(["the", "a", "an", "of"]);
+	const stopWords = new Set(["the", "a", "an", "of"]);
     return new Set(lowerCaseArr.filter(w => w.length > 0 && !stopWords.has(w)));
 }
 

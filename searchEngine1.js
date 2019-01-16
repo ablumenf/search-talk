@@ -7,13 +7,13 @@ function findEpisode(input) {
 	let desiredEpisode;
 	let maxJaccard = -1;
 	for(let i = 0; i < episodes.length; i++) {
-        const jaccardValues = episodes[i].map(ep => jaccard(input, ep));
+        const jaccardValues = episodes[i].map(ep => jaccard(input, ep.title));
         const maxIndex = jaccardValues.indexOf(Math.max(...jaccardValues));
         if(jaccardValues[maxIndex] > maxJaccard) {
             desiredEpisode = {
                 season: i + 1,
-                episode: maxIndex + 1,
-                title: episodes[i][maxIndex]
+                episode: episodes[i][maxIndex].episode,
+                title: episodes[i][maxIndex].title
             };
             maxJaccard = jaccardValues[maxIndex];
         }

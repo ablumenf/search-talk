@@ -1,7 +1,7 @@
 # Simple Search Engine
 
 Simple Search Engine <br>
-Last Updated: January 1, 2019 <br>
+Last Updated: January 16, 2019 <br>
 Author: Aaron Blumenfeld
 
 ## ABOUT:

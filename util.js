@@ -35,16 +35,16 @@ const params = {
 	"possessives": true, // remove possessives: Google's -> Google
 	"plurals": true, // convert plurals to singular
 	"verbs": true // turn verbs into infinitive form
-}
+};
 
 function nlp_reduce(s) {
 	return nlp(s).normalize(params).out('text');
 }
 
 /* test NLP stuff
-nlp("we read books").normalize(params).out('text');
-nlp("the foxes jump over the fences").normalize(params).out('text');
+nlp_reduce("we read books");
+nlp_reduce("the foxes jump over the fences");
 // next two examples show imperfections of this library
-nlp("I'm giving a talk on search engines").normalize(params).out('text');
-nlp("I'm giving a talk on search Engines").normalize(params).out('text');
+nlp_reduce("I'm giving a talk on search engines");
+nlp_reduce("I'm giving a talk on search Engines");
 */
